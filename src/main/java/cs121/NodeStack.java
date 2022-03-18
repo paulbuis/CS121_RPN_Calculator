@@ -1,7 +1,7 @@
 package cs121;
 
 public class NodeStack<T> implements Stack<T> {
-    private NodeList<T> list = new NodeList<>();
+    private final NodeList<T> list = new NodeList<>();
 
     @Override
     public void push(T item) {

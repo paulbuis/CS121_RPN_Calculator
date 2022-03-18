@@ -2,7 +2,7 @@ package cs121;
 
 public class StackDemo {
     public static void main(String[] args) {
-        Stack<Integer> s = new NodeStack<Integer>();
+        Stack<Integer> s = new NodeStack<>();
         s.push(3);
         s.push(4);
         System.out.printf("s= %s\n", s);

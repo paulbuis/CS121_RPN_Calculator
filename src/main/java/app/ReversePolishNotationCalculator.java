@@ -26,7 +26,7 @@ public class ReversePolishNotationCalculator {
 
 
     public static void main(String[] args) {
-        Evaluator evaluator = new Evaluator();
+        Evaluator<Integer> evaluator = new ArrayEvaluator();
         Scanner keyboard = new Scanner(System.in);
 
         while (keyboard.hasNext(pattern)) {
@@ -34,9 +34,9 @@ public class ReversePolishNotationCalculator {
 
             if (isNumber(next)) {
                 int number = Integer.parseInt(next);
-                // TODO: Add code here
+                evaluator.addOperand(number);
             } else if (isOperator(next)) {
-                // TODO: Add code here
+                evaluator.processBinaryOperator(next);
             } else if (isSpace(next)) {
                 continue;
             } else {
